@@ -1,0 +1,151 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+.Contactcontainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+
+}
+.Contactcontainer .contactcontent{
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Contactcontainer .contactcontent .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.contactcontent .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.contactcontent .left-side .contactdetails{
+  margin: 14px;
+  text-align: center;
+}
+.contactcontent .left-side .contactdetails i{
+  font-size: 30px;
+  color: #3e2093;
+  margin-bottom: 10px;
+}
+.contactcontent .left-side .contactdetails .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+.contactcontent .left-side .contactdetails .text-one,
+.contactcontent .left-side .contactdetails .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+.Contactcontainer .contactcontent .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.contactcontent .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+  .Contactcontainer{
+    width: 100%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .Contactcontainer .contactcontent .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .Contactcontainer{
+  
+    height: 100vh;
+  }
+  .Contactcontainer .contactcontent{
+    flex-direction: column-reverse;
+  }
+ .Contactcontainer .contactcontent .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .Contactcontainer .contactcontent .left-side::before{
+   display: none;
+ }
+ .Contactcontainer .contactcontent .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+ .right-side .message-box{
+  height: 0px;
+ }
+}

@@ -1,0 +1,80 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    z-index: 3;
+}
+.header-bg{
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 15px rgb(197, 192, 192);
+    opacity: 0.9;
+    transition: 0.5s;
+    z-index:3;
+}
+.nev-menu{
+ display: flex;
+}
+.nev-menu li{
+ list-style: none;
+ padding: 0 1rem;
+}
+.nev-menu li a{   
+color:black;
+font-size: 1.2rem;
+font-weight: 400;
+}
+.nev-menu li a:hover{
+  border: 1px solid rgb(111, 111, 233);
+  padding: 8px;
+  text-decoration: none;
+  color: rgb(68, 68, 213);
+  border-radius: 2rem;
+  transition: 0.2s;
+
+}
+.hamburger{
+ display: none;
+}
+
+@media screen and (max-width:1040px) {
+ .nev-menu{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     height: 23vh;
+     background-color: white;
+     position: absolute;
+     top: -800%;
+     right: 0;
+     z-index: -3;
+     transition: 0.3s;
+     box-shadow: 0px 5px 15px rgb(197, 192, 192);
+    }
+    .nev-menu.active{
+        top: 0;
+    }
+    .nev-menu li{
+     margin-top: 1rem;
+     text-align: center;
+    }
+    .nev-menu li a{
+   
+     margin-right: 0px !important;
+     font-size: 1rem;
+ }
+ .hamburger{
+     display: initial;
+     margin-right:10px;
+ }
+ .header{
+     padding-left: 10px;
+     /* height: 6vh; */
+ }
+
+}
